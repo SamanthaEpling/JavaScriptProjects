@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="JS/Basic_JavaScript_9.js"></script>
+        <link rel="stylesheet" type="text/css" href="CSS/Basic_CSS_1.css">
+    </head>
+    <body>
+        <div align="center">
+                <h4>First Assignment: Timer, by seconds</h4>
+                <p>How many seconds would you like to set your alarm for?</p>
+                <input id="seconds" value="" />
+                <button onclick="countdown()">Click here</button>
+                <p id="timer"></p>
+        </div>
+        <h4 align="center">Challenge Assignment: Slideshow/Carousel</h4>
+        
+        <div class="slideshow-container">
+            
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="IMG/Dan_Windy.jpg" style="width:100%">
+                    <div class="text">Dan & Windy, 2010</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="IMG/Mike_Windy_2.jpg" style="width:100%"">
+                    <div class="text">Mike & Windy, 2014</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"> 3 /3</div>
+                <img src="IMG/Romani_Mike_2.jpg" style="width:100%">
+                    <div class="text">Romani & Mike, 2019</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </body>
+</html>
