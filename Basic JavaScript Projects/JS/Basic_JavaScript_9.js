@@ -15,6 +15,7 @@ function countdown() {
 //Slideshow/carousel//
 
 var slideIndex = 1;
+
 showSlides(slideIndex);
 
 //Next/previous controls
