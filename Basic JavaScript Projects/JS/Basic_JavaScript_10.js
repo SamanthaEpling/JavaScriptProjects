@@ -52,34 +52,33 @@ function let_function() {
     document.getElementById("let_keyword_2").innerHTML = "<br>What do you mean, this is the number of horses we have now = " + H;
 }
 //Had much difficult referring to seperate js file for this assignment:
-//document.getElementById("sqrt_pi_result").innerHTML = return_function();
-    //function return_function() {
-            //return Math.sqrt(Math.PI);    
-    //}
+document.getElementById("sqrt_pi_result").innerHTML = return_function();
+    function return_function() {
+            return Math.sqrt(Math.PI);    
+    }
 
 //Had much difficult referring to seperate js file for this assignment:
     
-//let pet = {
-    //species: "Equine ",
-    //breed: "Halflinger ",
-    //age: "10 ",
-    //color: "chesnut ",
-    //sex: "gelding ",
-    //description: function() {
-        //return "For my next pet, it is reasonable to consider the " + this.species + this.breed + this.sex + " which would likely be " + this.color + "-colored.";
-    //}
-//};
-//document.getElementById("next_pet_object").innerHTML = pet.description();
+let pet = {
+    species: "Equine ",
+    breed: "Halflinger ",
+    age: "10 ",
+    color: "chesnut ",
+    sex: "gelding ",
+    description: function() {
+        return "For my next pet, it is reasonable to consider the " + this.species + this.breed + this.sex + " which would likely be " + this.color + "-colored.";
+    }
+};
+document.getElementById("next_pet_object").innerHTML = pet.description();
 
-document.getElementById("break_it_down").innerHTML = text;
-{var text = "";
-var i;
-for (i = 0; i < 10; i++) {
-    if (i === 6) {break;}
-    text += "The number is " + i + ".<br>";
-}
-}
 
+var text_2 = "";
+var k;
+for (k = 0; k < 10; k++) {
+    if (k === 6) {break;}
+    text_2 += "The number is " + k + ".<br>";
+}
+document.getElementById("breakingit_down").innerHTML = text_2;
 
 var text_1 = "";
 var j;
