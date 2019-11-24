@@ -28,7 +28,7 @@ body {
     text-align: center;
     color: darkblue;
     font-weight: bold;
-    font-family: Tahoma;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 45px;
 }
 
@@ -55,6 +55,7 @@ td {
 table tr:nth-child(-n+3) td:nth-child(-n+3) {
     background-color: #d7f3f7;
 }
+
 table tr:nth-child(-n+3) td:nth-child(-n+3):hover {
     background-color: #e5fbff;
 }
@@ -62,15 +63,19 @@ table tr:nth-child(-n+3) td:nth-child(-n+3):hover {
 table tr:nth-child(1) td:nth-child(1) {
     border-radius: 10px 0px 0px 0px;
 }
+
 table tr:nth-child(1) td:nth-child(3) {
     border-radius: 0px 10px 0px 0px;
 }
+
 table tr:nth-child(3) td:nth-child(3) {
     border-radius: 0px 0px 10px 0px;
 }
+
 table tr:nth-child(3) td:nth-child(1) {
     border-radius: 0px 0px 0px 10px;
 }
+
 .photo-container {
     height: 200px;
     width: 200px;
@@ -81,7 +86,7 @@ table tr:nth-child(3) td:nth-child(1) {
     transition: transform .3s;
     opacity: 1;
     position: absolute;
-    background-image: url("../images/avatorO.gif");
+    background-image: url("../images/avatarO.gif");
     width: 200px;
     height:200px;
     transform: translateY(-100%);
@@ -89,7 +94,7 @@ table tr:nth-child(3) td:nth-child(1) {
 .X {
     transition: transform .3s;
     opacity: 1;
-    background-image: url("../images/avatorX.gif");
+    background-image: url("../images/avatarX.gif");
     width:200px;
     height:200px;
     transform: translateY(100%)
@@ -118,7 +123,6 @@ table tr:nth-child(3) td:nth-child(1) {
     box-shadow: 5px 5px 25px -4px rgba(0,0,0,0.65);
     border-radius: 10px;
 }
-
 .displayBox:hover {
     background-color: rgba(53, 35, 142, .88);
 }
@@ -214,7 +218,7 @@ table tr:nth-child(3) td:nth-child(1) {
     background-color: rgb(57, 230, 0);
     margin: 20px 0px 0px 25px;
     padding: 12px 14px 12px 14px;
-    box-shadow: inset 3px 3px 15px -2px rgba(255, 255, 255, 0.95), 3px 3px 15px -4px rgba(0,0,0,0);
+    box-shadow: inset 3px 3px 15px -2px rgba(255, 255, 255, 0.95), 3px 3px 15px -4px rgba(0,0,0,0.85);
     border-radius: 10px;
 }
 
@@ -238,7 +242,7 @@ table tr:nth-child(3) td:nth-child(1) {
     background-color: rgb(255, 51, 51);
     margin: 20px 0px 0px 10px;
     padding: 12px 14px 12px 14px;
-    box-shadow: inset 3px 3px 15px -2 rgba(255, 255, 255, 0.95), 3px 3px 15px -4px rgba(0,0,0,0);
+    box-shadow: inset 3px 3px 15px -2 rgba(255, 255, 255, 0.95), 3px 3px 15px -4px rgba(0,0,0,0.85);
     border-radius: 10px;
 }
 
