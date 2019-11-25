@@ -14,8 +14,8 @@ function rollForTurn() {
     var minimum = 1;
     var maximum = 11;
     var first = "";
-    var txt1= "";
-    for (var i = 0; 1 < 2; i++) {
+    var txt1 = "";
+    for (var i = 0; i < 2; i++) {
         // random whole number between 1 and 10
         ranNum = Math.floor(Math.random()*(maximum - minimum) + minimum); // Math.floor rounds down to whole #
         xArray.push(ranNum);
@@ -33,7 +33,7 @@ function rollForTurn() {
         txt1 = "Player 1 rolled ["+pOne+"]<br>";
         writeMsg(txt1);
         txt1 = txt1 + "Player 2 rolled ["+pTwo+"]<br><br>";
-        setTimeout(function() {writeMsg(txt);}, 1000); // time delay for dramatic effect
+        setTimeout(function() {writeMsg(txt1);}, 1000); // time delay for dramatic effect
     }
     // determine and concatenate string showing which player won the roll
     if (pOne > pTwo) {
@@ -150,7 +150,7 @@ function saveSettings() {
     var p1Selected = document.getElementById("player1").options;
     var p2Index = document.getElementById("player2").selectedIndex;
     var p2Selected = document.getElementById("player2").options;
-    if (p1Selected[p1Index].text ==p2Selected[p2Index].text) {
+    if (p1Selected[p1Index].text == p2Selected[p2Index].text) {
         alert("Error - Player 1 and Player 2 cannot both be assigned as: "+p1Selected[p1Index].text)
     } else {
         document.getElementById('p1Display').innerHTML=p1Selected[p1Index].text;
@@ -184,9 +184,9 @@ function determineAvatar() {
 // this function changes activeplayer over to the other player
 function avatarPlaced() {
     var parseText = document.getElementById('gameMsg').innerHTML;
-    var showPlayer = document.getElementByid('showPlayer'); // select the current element to memory
+    var showPlayer = document.getElementById('showPlayer'); // select the current element to memory
     // check if there is already a winner... if there is, then don't continue the game
-    if (parseText == "That's three in a row, Player 1 wins!" || parseText == "That's three in a row, Player 2 wins!") {
+    if (parseText == "That's three in a row, Player 1 wins!" || parseText == "That's three in a row, Player 2 wins!"){
         showPlayer.innerHTML = "Game Stopped";
         showPlayer.style.color="red";
     }
@@ -260,7 +260,7 @@ function check4Tie() {
     if(boardState.length >= 9 && check != "That's three in a row, Player 1 wins!" && check != "That's three in a row, Player 2 wins!") {
         var txt1 = "Oh no! Nobody wins, it was a tie!";
         tieSound(); // play a sound when a tie has been detected
-        writeMsg(txt);
+        writeMsg(txt1);
         setTimeout(function() {stopGame();}, 3000);
     }
 }
@@ -288,7 +288,7 @@ function glowBoard(pos) {
     var index1 = pos[1];
     var index2 = pos[2];
     var squares = document.getElementsByClassName('square')
-    for (var i=0; 1<square.length; i++) {
+    for (var i=0; i<squares.length; i++) {
         if (i == index0) {
             var bg1 = squares[i];
             blink();
@@ -381,7 +381,7 @@ function blink() {
 // checking for wincon squares 012
 function checkWinCon1(info,squareArray) {
     var winCon1 = [0,1,2];
-    var WinDetected = "on";
+    var winDetected = "on";
     // iterate through the growing array during
     // gametime searching for the existence of
     // index 0, index 1 and index 2 and once they
@@ -399,7 +399,7 @@ function checkWinCon1(info,squareArray) {
         }
     }
     // this will trigger (ONLY) if there was a match for index0, index1, and index2
-    if (match0Avatar != undefined && match1Avatar != undefined && match2hAvatar != undefined) {
+    if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
         if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
             winDetected = "win"; // this flag will pass when a win has been detected
             winner(winDetected,winCon1);
@@ -487,7 +487,7 @@ function checkWinCon5(info,squareArray) {
             var match1Avatar = info[i].charAt(1); // only interested in recording the avatar
         }
         if (info[i].charAt(0) =="4") {
-            var match4Avatar = info(i).charAt(1);
+            var match4Avatar = info[i].charAt(1);
         }
         if (info[i].charAt(0) =="7") {
             var match7Avatar = info[i].charAt(1);
@@ -503,8 +503,8 @@ function checkWinCon5(info,squareArray) {
 
 // checking for wincon squares 258
 function checkWinCon6(info,squareArray) {
-    var winCon1 = [2,5,8];
-    var WinDetected = "on";
+    var winCon6 = [2,5,8];
+    var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "2") {
             var match2Avatar = info[i].charAt(1);
@@ -530,9 +530,9 @@ function checkWinCon7(info,squareArray) {
     var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "6") {
-            var match6Avatar = info[i].charAT(1); // only interested in recording the avatar
+            var match6Avatar = info[i].charAt(1); // only interested in recording the avatar
         }
-        if (info[i].charAT(0) == "4") {
+        if (info[i].charAt(0) == "4") {
             var match4Avatar = info[i].charAt(1);
         }
         if (info[i].charAt(0) == "2") {
